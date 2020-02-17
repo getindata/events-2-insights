@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>Floating labels example for Bootstrap</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    :root {
+      --input-padding-x: .75rem;
+      --input-padding-y: .75rem;
+    }
+
+    html,
+    body {
+      height: 100%;
+    }
+
+    body {
+      display: -ms-flexbox;
+      display: -webkit-box;
+      display: flex;
+      -ms-flex-align: center;
+      -ms-flex-pack: center;
+      -webkit-box-align: center;
+      align-items: center;
+      -webkit-box-pack: center;
+      justify-content: center;
+      padding-top: 40px;
+      padding-bottom: 40px;
+      background-color: #f5f5f5;
+    }
+
+    .form-signin {
+      width: 100%;
+      max-width: 420px;
+      padding: 15px;
+      margin: 0 auto;
+    }
+
+  </style>
+
+</head>
+
+<body>
+<form class="form-signin" method="post">
+  <div class="text-center mb-4">
+    <h1 class="h3 mb-3 font-weight-normal">Pub/Sub Publisher</h1>
+  </div>
+
+  <div class="form-label-group">
+    <textarea name="payload" placeholder="Enter message here" class="form-control"></textarea>
+  </div>
+
+  <button class="btn btn-lg btn-primary btn-block" type="submit">Send</button>
+  <p class="mt-5 mb-3 text-muted text-center">&copy; GetInData 2020</p>
+</form>
+</body>
+</html>
