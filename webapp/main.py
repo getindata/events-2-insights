@@ -3,6 +3,7 @@ from flask import Flask, render_template, request, redirect
 import json
 import logging
 import os
+import datetime
 from google.cloud import pubsub_v1
 
 
@@ -18,6 +19,7 @@ def send_message(message, user_agent):
     topic_path = publisher.topic_path(app.config['GCLOUD_PROJECT'],
                                       app.config['PUBSUB_TOPIC'])
     data = json.dumps({
+        "timestamp": datetime.datetime.now().isoformat(),
         "message": message,
         "user_agent": user_agent
     }).encode('utf-8')
@@ -35,7 +37,7 @@ def index():
     user_agent = request.headers.get('User-Agent')
     send_message(message, user_agent)
 
-    return redirect('/', code=200)
+    return redirect('/', code=302)
 
 
 @app.errorhandler(500)

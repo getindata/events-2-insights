@@ -1,4 +1,4 @@
 runtime: python37
 
 env_variables:
-    PUBSUB_TOPIC: <topic-here>
+    PUBSUB_TOPIC: pools-messages
